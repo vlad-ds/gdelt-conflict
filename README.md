@@ -50,7 +50,7 @@ result = df[(df.Year == 1985) &
 print(result.SumEvents) 
 ```
 
-The dataset includes additional features from GDELT: the Goldstein scale score, the average and total number of mentions, and the average of the average tone. For more information about see see below.
+The dataset includes additional features from GDELT: the Goldstein scale score, the average and total number of mentions, and the average of the average tone. Read below to find out more about these features.
 
 For more information see:
 
