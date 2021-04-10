@@ -1,5 +1,7 @@
 # GDELT Conflict Dataset 1.0 (2021)
 
+[Kaggle Dataset.](https://www.kaggle.com/vladproex/gdelt-conflict-dataset-10)
+
 #### Disclaimer
 
 I built this dataset as a personal project. It comes with no guarantees. Feel free to use it for your own project or article, but please acknowledge me. And remember to include a citation to the GDELT Project and their [website.](https://www.gdeltproject.org/)
