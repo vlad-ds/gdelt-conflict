@@ -2,7 +2,7 @@
 
 #### Disclaimer
 
-I built this dataset as a personal project. It comes with no guarantee whatsoever. Feel free to use it for your own project or article, but please acknowledge me and link here. 
+I built this dataset as a personal project. It comes with no guarantees. Feel free to use it for your own project or article, but please acknowledge me. And remember to include a citation to the GDELT Project and their [website.](https://www.gdeltproject.org/)
 
 I may release new versions in the future, but no guarantees.
 
@@ -14,9 +14,9 @@ This repository documents the sourcing of the GDELT Conflict Dataset 2021.
 
 The [GDELT Project](https://www.gdeltproject.org/) provides constant monitoring of news media across the world. Its archives stretch back to January 1, 1979. The database is supposedly being updated every 15 minutes. Their mission is to "to construct a catalog of human societal-scale behavior and beliefs across all countries of the world".
 
-The GDELT Conflict Dataset leverages this data to examine the evolution of conflict in the past 40 years. It aggregates information on more than 83 million events extracted from media reports in 258 countries for the period 1979-2021. The events are grouped in 32 categories describing conflictual actions at various scales, such as `Confiscate property, 'Carry out suicide bombing', 'Occupy territory'.
+The GDELT Conflict Dataset leverages GDELT to examine the evolution of conflict in the past 40 years. It aggregates information on more than 83 million events extracted from media reports in 258 countries for the period 1979-2021. The events are grouped in 32 categories describing conflict actions at various scales, such as `Confiscate property, 'Carry out suicide bombing', 'Occupy territory'.
 
-Hopefully this dataset can help us gain better insight in the evolution of conflict across the world. 
+Hopefully this dataset can help us gain better insight in the evolution of conflict. 
 
 ## Data Model
 
@@ -35,7 +35,7 @@ The last category had no returns on the GDELT database.
 
 This dataset is aggregated by event code, year and country. 
 
-For example, you can see the number of 'Assassinate' events that occurred in USA in 1985:
+For example, it allows you to see the number of 'Assassinate' events that occurred in USA in 1985:
 
 ```python
 import pandas as pd
@@ -48,7 +48,7 @@ result = df[(df.Year == 1985) &
 print(result.SumEvents) 
 ```
 
-The dataset includes additional features: the Goldstein scale score, the average and total number of mentions, and the average of the average tone. For more information about these features see see below.
+The dataset includes additional features from GDELT: the Goldstein scale score, the average and total number of mentions, and the average of the average tone. For more information about see see below.
 
 For more information see:
 
@@ -60,7 +60,7 @@ For more information see:
 
 ## Extraction
 
-The GDELT database was accessed on Google Big Query as `gdelt-bq`. The following query was used:
+I accessed the GDELT database Google Big Query as `gdelt-bq`. I used this query:
 
 ```sql
 SELECT Year, 
@@ -106,9 +106,9 @@ The code for the processing is accessible in the notebook.
 
 * **SumEvents**: count of events by event code, year and country
 
-* **TotalEvents**: total events by country and year according to the GDELT 1.0 normalization files
+* **TotalEvents**: total events by year and country according to the GDELT 1.0 normalization files
 
-* **NormalizedEvents1000**: proportion of events on the normalization total (over 1000)
+* **NormalizedEvents1000**: proportion of events on the normalization total (over 1000), i.e. `SumEvents/TotalEvents * 1000`
 
 * **EventRootCode**: CAMEO event root code 
 
