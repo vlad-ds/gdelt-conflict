@@ -1,6 +1,6 @@
 # GDELT Conflict Dataset 1.0 (2021)
 
-[Kaggle Dataset.](https://www.kaggle.com/vladproex/gdelt-conflict-dataset-10)
+[Kaggle Dataset.](https://www.kaggle.com/vladproex/gdelt-conflict-events-1979-2021)
 
 #### Disclaimer
 
